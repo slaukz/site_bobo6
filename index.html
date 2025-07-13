@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para você ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f8cdda, #1d2b64);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 90%;
+      z-index: 2;
+      position: relative;
+    }
+
+    .message {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      animation: pulse 2s infinite;
+    }
+
+    /* ✨ Brilhinhos fofos piscando */
+    .twinkle-container {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .twinkle {
+      position: absolute;
+      color: #ffffffcc;
+      font-size: 16px;
+      opacity: 0;
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* Posicionamento aleatório */
+    .twinkle:nth-child(1) { top: 5%; left: 10%; animation-delay: 0s; font-size: 14px; }
+    .twinkle:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; font-size: 20px; }
+    .twinkle:nth-child(3) { top: 40%; left: 25%; animation-delay: 0.5s; font-size: 18px; }
+    .twinkle:nth-child(4) { top: 60%; left: 70%; animation-delay: 2s; font-size: 16px; }
+    .twinkle:nth-child(5) { top: 75%; left: 15%; animation-delay: 2.5s; font-size: 22px; }
+    .twinkle:nth-child(6) { top: 50%; left: 50%; animation-delay: 1.3s; font-size: 12px; }
+    .twinkle:nth-child(7) { top: 30%; left: 40%; animation-delay: 3s; font-size: 20px; }
+    .twinkle:nth-child(8) { top: 10%; left: 90%; animation-delay: 0.8s; font-size: 24px; }
+    .twinkle:nth-child(9) { top: 85%; left: 60%; animation-delay: 1.7s; font-size: 18px; }
+    .twinkle:nth-child(10) { top: 95%; left: 5%; animation-delay: 2.2s; font-size: 20px; }
+
+    /* ❤️ Corações subindo */
+    .heart {
+      position: absolute;
+      bottom: -30px;
+      font-size: 24px;
+      color: #ff9aa2;
+      animation: floatUp 6s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 50%; animation-delay: 1s; }
+    .heart:nth-child(4) { left: 70%; animation-delay: 3s; }
+    .heart:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-50vh) scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    /* 💓 Pulso suave no texto */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    @media screen and (max-width: 600px) {
+      .message {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="twinkle-container">
+    <span class="twinkle">*</span>
+    <span class="twinkle">✦</span>
+    <span class="twinkle">✧</span>
+    <span class="twinkle">❉</span>
+    <span class="twinkle">✺</span>
+    <span class="twinkle">★</span>
+    <span class="twinkle">❈</span>
+    <span class="twinkle">✨</span>
+    <span class="twinkle">❄</span>
+    <span class="twinkle">✿</span>
+  </div>
+
+  <!-- Corações subindo -->
+  <span class="heart">❤️</span>
+  <span class="heart">💖</span>
+  <span class="heart">❤️</span>
+  <span class="heart">💘</span>
+  <span class="heart">💕</span>
+
+  <div class="container">
+    <div class="message">
+        <div>Oi amor, bom dia, espero que tenha dormido bem! Fiz algo pra te mostrar 💌</div>
+        <p>Clique no botão para prosseguir</p>
+        <button onclick="location.href='pageteste.html'">para prosseguir</button>
+    </div>
+  </div>
+
+</body>
+</html>
